@@ -33,6 +33,11 @@ window.addEventListener('scroll', () => {
     }else{
         navbar.classList.remove('fixed-nav');
     }
+    if(pos > 550){
+        top_link.classList.add('show-link');
+    }else{
+        top_link.classList.remove('show-link');
+    }
 })
 // ********** smooth scroll ************
 // select links
