@@ -233,7 +233,10 @@ nav {
   color: var(--clr-secondary);
 }
 .logo {
-  height: 50px;
+  height: 40px;
+  width: 50px;
+  transform: scale(1.3);
+  background: url('./Logo_dark.svg') no-repeat;
 }
 .links-container {
   height: 0;
@@ -271,6 +274,9 @@ nav {
   }
   .nav-header {
     padding: 0;
+  }
+  .logo{
+    background: url('Logo_light.svg') no-repeat;
   }
   .nav-toggle {
     display: none;
