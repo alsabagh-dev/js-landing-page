@@ -7,6 +7,13 @@
 const date = document.getElementById('date');
 date.innerHTML = new Date().getFullYear();
 // ********** close links ************
+const nav_toggle = document.querySelector('.nav-toggle');
+const links_container = document.querySelector('.links-container');
+const links = document.querySelector('.links');
+
+nav_toggle.addEventListener('click', () => {
+    links_container.classList.toggle('show-links')
+});
 
 // ********** fixed navbar ************
 
