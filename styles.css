@@ -195,18 +195,18 @@ Scroll
 */
 /* navbar */
 nav {
-  background: var(--clr-white);
-  padding: 1rem 1.5rem;
-}
-/* fixed nav */
-.fixed-nav {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   background: var(--clr-white);
-  box-shadow: var(--light-shadow);
+  padding: 1rem 1.5rem;
   transition: var(--transition);
+}
+/* fixed nav */
+.fixed-nav {
+  background: var(--clr-white);
+  box-shadow: var(--light-shadow);
 }
 .fixed-nav .links a {
   color: var(--clr-grey-1);
