@@ -238,6 +238,9 @@ nav {
   transform: scale(1.3);
   background: url('./Logo_dark.svg') no-repeat;
 }
+.fixed-nav .logo{
+  background: url('Logo_dark.svg') no-repeat;
+}
 .links-container {
   height: 0;
   overflow: hidden;
