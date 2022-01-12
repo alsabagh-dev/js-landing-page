@@ -12,13 +12,10 @@ const links_container = document.querySelector('.links-container');
 const links = document.querySelector('.links');
 
 nav_toggle.addEventListener('click', () => {
-    const links_container_height = links_container.style.height;
+    const links_container_height = links_container.offsetHeight;
 
-    if(!links_container_height || links_container_height === '0px'){ // show the links
-        const links_count = links.querySelectorAll('ul.links li').length;
-        const link_height = links.querySelector('ul.links li').offsetHeight;
-    
-        links_container.style.height = String(link_height * links_count)+'px';
+    if(links_container_height === 0){ // show the links
+        links_container.style.height = `${links.offsetHeight}px`;
     }else{ // hide the links
         links_container.style.height = 0;
     }
