@@ -12,7 +12,16 @@ const links_container = document.querySelector('.links-container');
 const links = document.querySelector('.links');
 
 nav_toggle.addEventListener('click', () => {
-    links_container.classList.toggle('show-links')
+    const links_container_height = links_container.style.height;
+
+    if(!links_container_height || links_container_height === '0px'){ // show the links
+        const links_count = links.querySelectorAll('ul.links li').length;
+        const link_height = links.querySelector('ul.links li').offsetHeight;
+    
+        links_container.style.height = String(link_height * links_count)+'px';
+    }else{ // hide the links
+        links_container.style.height = 0;
+    }
 });
 
 // ********** fixed navbar ************
