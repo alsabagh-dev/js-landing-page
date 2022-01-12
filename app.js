@@ -41,3 +41,28 @@ window.addEventListener('scroll', () => {
 })
 // ********** smooth scroll ************
 // select links
+const scroll_links = document.querySelectorAll('.scroll-link');
+
+scroll_links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+        // prevent default behavior
+        event.preventDefault();
+        
+        // navigate to target
+        const id  = event.currentTarget.getAttribute('href').slice(1);
+        const element = document.getElementById(id);
+        // remove the nav height as its postion is fixed.
+        let pos  = element.offsetTop -  navbar.offsetHeight;
+        // if links is open
+        if(links_container.offsetHeight > 100) {
+            pos += links_container.offsetHeight;
+        }
+        // navigate
+        window.scrollTo({
+            left:0,
+            top:pos,
+        });
+        // close links
+        links_container.style.height = 0;
+    });
+});
